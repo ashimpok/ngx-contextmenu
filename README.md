@@ -45,6 +45,13 @@ export class MyContextMenuClass {
 }
 ```
 
+### Note on passive items
+`ContextMenuService` exposes `triggerClose` Subject. You can call it with a specific instance of a `ContextMenuContentComponent` to close just that one or with `undefined` to close all open context menus.
+
+```
+this.contextMenuService.triggerClose.next(undefined);
+```
+
 ## Context Menu Items
 
 - Each context menu item is a `<ng-template>` element with the `contextMenuItem` attribute directive applied.
